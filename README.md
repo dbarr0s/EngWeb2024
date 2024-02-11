@@ -7,4 +7,5 @@ Aqui serão armazenados todos os trabalhos da Unidade Curricular de Engenharia W
 
 - **Nome:** Diogo Rafael dos Santos Barros
 - **ID:** A100600
-- **Foto:** ![Fotografia do aluno](diogo.png)
+- **Foto:**
+![Fotografia do aluno](diogo.png)
