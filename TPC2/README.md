@@ -12,7 +12,7 @@
 - Selecionando uma página de uma cidade, aparecem todas as informações dessa cidade.
 - Selecionando uma página de uma ligação, aparecem todas as informações dessa ligação e na origem e destino, tem o id da cidade e se for selecionado leva para a página da cidade com esse id.
 
-## Como correr
+## Comandos e Link da Página
 - ```json-server --watch mapa-virtual.json```
 - ```node mapa.js```
 - ```http://localhost:2024/```
