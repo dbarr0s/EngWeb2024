@@ -13,6 +13,6 @@
 - Selecionando uma página de uma ligação, aparecem todas as informações dessa ligação e na origem e destino, tem o id da cidade e se for selecionado leva para a página da cidade com esse id.
 
 ## Como correr
-- ```json-server --watch db.json```
-- ```node servidor.js```
+- ```json-server --watch mapa-virtual.json```
+- ```node mapa.js```
 - ```http://localhost:2024/```
