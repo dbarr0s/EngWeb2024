@@ -14,7 +14,7 @@ def jsonFixer(data):
                     periodo_id += 1
                     periodos[periodo] = {"id": str(periodo_id), "nome": periodo}
                 
-                entry["periodo"] = periodos[periodo]["id"]
+                entry["periodo"] = periodos[periodo]["nome"]
                 new_data.append(entry)
 
         except json.JSONDecodeError as e:
