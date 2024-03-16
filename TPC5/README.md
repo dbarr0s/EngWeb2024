@@ -1,4 +1,4 @@
-# TPC5: Compositores de Música com diferente tipo de construção
+# TPC5: Compositores e Períodos de Música
 
 ## 2024-03-16
 
