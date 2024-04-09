@@ -1,0 +1,98 @@
+extends layout 
+
+block content
+    .w3-card-4 
+    header.w3-container.w3-black 
+      h1= titulo
+    .w3-container 
+        form.w3-container(method="POST")
+                fieldset
+                    legend Metadata
+                    label Id
+                    input.w3.input.w3.round(type="text" name="_id" value= p._id)
+                    label Nome
+                    input.w3.input.w3.round(type="text" name="nome" value= p.nome)
+                    label Idade
+                    input.w3.input.w3.round(type="number" name="idade" value= p.idade)
+                    label Sexo
+                    select.w3.select.w3.round(name="sexo")
+                        option(value="masculino" selected=p.sexo==="masculino") Masculino
+                        option(value="feminino" selected=p.sexo==="feminino") Feminino
+                        option(value="outro" selected=p.sexo==="outro") Outro
+                    label Morada - Cidade
+                    input.w3input.w3.round(type="text" name="morada.cidade" value= p.morada.cidade)
+                    label Morada - Distrito
+                    input.w3.input.w3.round(type="text" name="morada.distrito" value= p.morada.distrito)
+                    label Descrição
+                    input.w3.input.w3.round(type="text" name="descrição" value= p.descrição)
+                    label Profissão
+                    input.w3.input.w3.round(type="text" name="profissao" value= p.profissao)
+                    label Partido Político (Abreviação)
+                    input.w3.input.w3.round(type="text" name="partido_politico.party_abbr" value= p.partido_politico.party_abbr)
+                    label Partido Político (Nome)
+                    input.w3.input.w3.round(type="text" name="partido_politico.party_name" value= p.partido_politico.party_name)
+                    label Religião
+                    input.w3.input.w3.round(type="text" name="religiao" value= p.religiao)
+                    label Desportos
+                    input.w3.input.w3.round(type="text" name="desportos" value= p.desportos.join(', '))
+                    label Animais
+                    input.w3.input.w3.round(type="text" name="animais" value= p.animais.join(', '))
+                    label Figuras Públicas PT
+                    input.w3.input.w3.round(type="text" name="figura_publica_pt" value= p.figura_publica_pt.join(', '))
+                    label Marca de Carro
+                    input.w3.input.w3.round(type="text" name="marca_carro" value= p.marca_carro)
+                    label Destinos Favoritos
+                    input.w3.input.w3.round(type="text" name="destinos_favoritos" value= p.destinos_favoritos.join(', '))
+                    label Atributos
+                    p Fumador:
+                    select(name="atributos.fumador")
+                        option(value="true" selected=p.atributos.fumador==="true") Sim
+                        option(value="false" selected=p.atributos.fumador==="false") Não
+
+                    p Gosta de cinema:
+                    select(name="atributos.gosta_cinema")
+                        option(value="true" selected=p.atributos.gosta_cinema==="true") Sim
+                        option(value="false" selected=p.atributos.gosta_cinema==="false") Não
+
+                    p Gosta de viajar:
+                    select(name="atributos.gosta_viajar")
+                        option(value="true" selected=p.atributos.gosta_viajar==="true") Sim
+                        option(value="false" selected=p.atributos.gosta_viajar==="false") Não
+
+                    p Acorda cedo:
+                    select(name="atributos.acorda_cedo")
+                        option(value="true" selected=p.atributos.acorda_cedo==="true") Sim
+                        option(value="false" selected=p.atributos.acorda_cedo==="false") Não
+
+                    p Gosta de ler:
+                    select(name="atributos.gosta_ler")
+                        option(value="true" selected=p.atributos.gosta_ler==="true") Sim
+                        option(value="false" selected=p.atributos.gosta_ler==="false") Não
+
+                    p Gosta de música:
+                    select(name="atributos.gosta_musica")
+                        option(value="true" selected=p.atributos.gosta_musica==="true") Sim
+                        option(value="false" selected=p.atributos.gosta_musica==="false") Não
+
+                    p Gosta de comer:
+                    select(name="atributos.gosta_comer")
+                        option(value="true" selected=p.atributos.gosta_comer==="true") Sim
+                        option(value="false" selected=p.atributos.gosta_comer==="false") Não
+
+                    p Gosta de animais estimação:
+                    select(name="atributos.gosta_animais_estimacao")
+                        option(value="true" selected=p.atributos.gosta_animais_estimacao==="true") Sim
+                        option(value="false" selected=p.atributos.gosta_animais_estimacao==="false") Não
+
+                    p Gosta de dançar:
+                    select(name="atributos.gosta_dancar")
+                        option(value="true" selected=p.atributos.gosta_dancar==="true") Sim
+                        option(value="false" selected=p.atributos.gosta_dancar==="false") Não
+                    br
+                    label Comida Favorita
+                    input.w3-input.w3-round(type="text" name="comida_favorita" value=`${p.atributos.comida_favorita}`)
+                    br
+                    button.w3.btn.w3.green.w3.mb2(type="submit") Editar
+        footer.w3.container.w3.black 
+            a.w3.button.w3-(href="/pessoas") Voltar à lista das pessoas
+            h5 Generated by EngWeb2024 in #{data}

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  .w3-card-4 
+    header.w3-container.w3-black 
+      h1= titulo
+      a.w3-btn.w3-round.w3-grey(href="/pessoas/registo") +
+    .w3-container 
+      table.w3-table-all 
+        tr 
+          th Id 
+          th Nome 
+          th Ações
+        each p in pessoas 
+          tr 
+            td
+              a(href="/pessoas/" + p.id) #{p.id}
+            td=p.nome
+            td
+              a.w3-button.w3-green(href="/pessoas/edit/" + p.id) Editar 
+              a.w3-button.w3-red(href="/pessoas/delete/" + p.id) Apagar
+
+    footer.w3-container.w3-black 
+      a.w3-button.w3-(href="/") Voltar ao Menu Principal
+      address Gerado por EngWeb2024 em #{data} 
